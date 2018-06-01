@@ -1,4 +1,4 @@
-package com.whh.spring.boot.springboot2;
+package com.whh.spring.boot;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

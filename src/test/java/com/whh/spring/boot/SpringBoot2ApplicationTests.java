@@ -1,4 +1,4 @@
-package com.whh.spring.boot.springboot2;
+package com.whh.spring.boot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
