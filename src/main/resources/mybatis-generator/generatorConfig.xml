@@ -5,7 +5,8 @@
 <generatorConfiguration>
     <!-- 引入配置文件 -->
     <properties resource="mybatis-generator/generator.properties"/>
-    <classPathEntry location="D:\DEV\.m2\repository\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar"/>
+    <!-- 可以不用配置 -->
+    <!--<classPathEntry location="D:\DEV\.m2\repository\mysql\mysql-connector-java\5.1.21\mysql-connector-java-5.1.21.jar"/>-->
     <context id="context" targetRuntime="MyBatis3">
         <commentGenerator>
             <property name="suppressAllComments" value="false"/>
