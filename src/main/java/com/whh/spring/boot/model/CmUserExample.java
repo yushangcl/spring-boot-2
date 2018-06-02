@@ -1,14 +1,21 @@
 package com.whh.spring.boot.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CmUserExample {
+public class CmUserExample implements Serializable {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
+
+    private static final long serialVersionUID = 1L;
+
+    private Integer limit;
+
+    private Integer offset;
 
     public CmUserExample() {
         oredCriteria = new ArrayList<Criteria>();
@@ -63,7 +70,26 @@ public class CmUserExample {
         distinct = false;
     }
 
-    protected abstract static class GeneratedCriteria {
+    public void setLimit(Integer limit) {
+        this.limit = limit;
+    }
+
+    public Integer getLimit() {
+        return limit;
+    }
+
+    public void setOffset(Integer offset) {
+        this.offset = offset;
+    }
+
+    public Integer getOffset() {
+        return offset;
+    }
+
+    /**
+     * CM_USER 2018-06-02
+     */
+    protected abstract static class GeneratedCriteria implements Serializable {
         protected List<Criterion> criteria;
 
         protected GeneratedCriteria() {
@@ -295,14 +321,20 @@ public class CmUserExample {
         }
     }
 
-    public static class Criteria extends GeneratedCriteria {
+    /**
+     * CM_USER
+     */
+    public static class Criteria extends GeneratedCriteria implements Serializable {
 
         protected Criteria() {
             super();
         }
     }
 
-    public static class Criterion {
+    /**
+     * CM_USER 2018-06-02
+     */
+    public static class Criterion implements Serializable {
         private String condition;
 
         private Object value;

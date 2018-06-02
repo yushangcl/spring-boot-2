@@ -1,32 +1,69 @@
 package com.whh.spring.boot.model;
 
-public class CmUser {
+import java.io.Serializable;
+
+public class CmUser implements Serializable {
+    /**
+     * 用户id
+     */
     private Long id;
 
+    /**
+     * 用户名字
+     */
     private String name;
 
+    /**
+     * 年龄
+     */
     private Integer age;
 
+    private static final long serialVersionUID = 1L;
+
+    /**
+     * 用户id
+     * @return id 用户id
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * 用户id
+     * @param id 用户id
+     */
     public void setId(Long id) {
         this.id = id;
     }
 
+    /**
+     * 用户名字
+     * @return name 用户名字
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * 用户名字
+     * @param name 用户名字
+     */
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
     }
 
+    /**
+     * 年龄
+     * @return age 年龄
+     */
     public Integer getAge() {
         return age;
     }
 
+    /**
+     * 年龄
+     * @param age 年龄
+     */
     public void setAge(Integer age) {
         this.age = age;
     }
