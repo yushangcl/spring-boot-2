@@ -184,5 +184,11 @@
       age = #{age,jdbcType=INTEGER}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  <select id="selectUsers" resultType="com.whh.spring.boot.model.CmUser">
+    SELECT
+    <include refid="Base_Column_List" />
+    FROM
+    CM_USER
+  </select>
   <cache />
 </mapper>
