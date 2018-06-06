@@ -65,10 +65,11 @@
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.21</version>
+            <version>8.0.11</version>
         </dependency>
 
         <!--mybatis-->
@@ -131,10 +132,11 @@
                     <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java
            配置这个依赖主要是为了等下在配置MG的时候可以不用配置classPathEntry这样的一个属性，避免
            代码的耦合度太高 -->
+                    <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.21</version>
+                        <version>8.0.11</version>
                     </dependency>
                     <!--<dependency>-->
                         <!--<groupId>org.mybatis.generator</groupId>-->

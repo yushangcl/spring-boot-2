@@ -87,7 +87,7 @@ public class CmUserExample implements Serializable {
     }
 
     /**
-     * CM_USER 2018-06-02
+     * cm_user 2018-06-06
      */
     protected abstract static class GeneratedCriteria implements Serializable {
         protected List<Criterion> criteria;
@@ -319,10 +319,70 @@ public class CmUserExample implements Serializable {
             addCriterion("age not between", value1, value2, "age");
             return (Criteria) this;
         }
+
+        public Criteria andCreateUserIdIsNull() {
+            addCriterion("create_user_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateUserIdIsNotNull() {
+            addCriterion("create_user_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateUserIdEqualTo(Long value) {
+            addCriterion("create_user_id =", value, "createUserId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateUserIdNotEqualTo(Long value) {
+            addCriterion("create_user_id <>", value, "createUserId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateUserIdGreaterThan(Long value) {
+            addCriterion("create_user_id >", value, "createUserId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateUserIdGreaterThanOrEqualTo(Long value) {
+            addCriterion("create_user_id >=", value, "createUserId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateUserIdLessThan(Long value) {
+            addCriterion("create_user_id <", value, "createUserId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateUserIdLessThanOrEqualTo(Long value) {
+            addCriterion("create_user_id <=", value, "createUserId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateUserIdIn(List<Long> values) {
+            addCriterion("create_user_id in", values, "createUserId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateUserIdNotIn(List<Long> values) {
+            addCriterion("create_user_id not in", values, "createUserId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateUserIdBetween(Long value1, Long value2) {
+            addCriterion("create_user_id between", value1, value2, "createUserId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateUserIdNotBetween(Long value1, Long value2) {
+            addCriterion("create_user_id not between", value1, value2, "createUserId");
+            return (Criteria) this;
+        }
     }
 
     /**
-     * CM_USER
+     * cm_user
      */
     public static class Criteria extends GeneratedCriteria implements Serializable {
 
@@ -332,7 +392,7 @@ public class CmUserExample implements Serializable {
     }
 
     /**
-     * CM_USER 2018-06-02
+     * cm_user 2018-06-06
      */
     public static class Criterion implements Serializable {
         private String condition;

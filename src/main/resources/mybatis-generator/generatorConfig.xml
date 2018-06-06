@@ -79,7 +79,7 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <table tableName="CM_USER" enableCountByExample="true" enableDeleteByExample="true"
+        <table tableName="cm_user" enableCountByExample="true" enableDeleteByExample="true"
                enableSelectByExample="true" enableUpdateByExample="true"/>
     </context>
 </generatorConfiguration>

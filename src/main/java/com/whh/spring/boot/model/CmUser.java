@@ -18,6 +18,11 @@ public class CmUser implements Serializable {
      */
     private Integer age;
 
+    /**
+     * 
+     */
+    private Long createUserId;
+
     private static final long serialVersionUID = 1L;
 
     /**
@@ -68,6 +73,22 @@ public class CmUser implements Serializable {
         this.age = age;
     }
 
+    /**
+     * 
+     * @return create_user_id 
+     */
+    public Long getCreateUserId() {
+        return createUserId;
+    }
+
+    /**
+     * 
+     * @param createUserId 
+     */
+    public void setCreateUserId(Long createUserId) {
+        this.createUserId = createUserId;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -77,6 +98,7 @@ public class CmUser implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", name=").append(name);
         sb.append(", age=").append(age);
+        sb.append(", createUserId=").append(createUserId);
         sb.append("]");
         return sb.toString();
     }
@@ -95,7 +117,8 @@ public class CmUser implements Serializable {
         CmUser other = (CmUser) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
-            && (this.getAge() == null ? other.getAge() == null : this.getAge().equals(other.getAge()));
+            && (this.getAge() == null ? other.getAge() == null : this.getAge().equals(other.getAge()))
+            && (this.getCreateUserId() == null ? other.getCreateUserId() == null : this.getCreateUserId().equals(other.getCreateUserId()));
     }
 
     @Override
@@ -105,6 +128,7 @@ public class CmUser implements Serializable {
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
         result = prime * result + ((getAge() == null) ? 0 : getAge().hashCode());
+        result = prime * result + ((getCreateUserId() == null) ? 0 : getCreateUserId().hashCode());
         return result;
     }
 }

@@ -2,6 +2,7 @@ package com.whh.spring.boot.controller;
 
 import com.whh.spring.boot.model.CmUser;
 import com.whh.spring.boot.service.CmUserService;
+import com.whh.spring.boot.utils.AbsResponse;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +18,9 @@ public class CmUserController {
     private CmUserService cmUserService;
 
     @RequestMapping(value = "/getUsers", method = RequestMethod.GET)
-    public List<CmUser> getUsers() {
-        return cmUserService.getUsers();
+    public AbsResponse<List<CmUser>> getUsers() {
+        AbsResponse<List<CmUser>> abs = new AbsResponse<>();
+        abs.setData(cmUserService.getUsers());
+        return abs;
     }
 }
