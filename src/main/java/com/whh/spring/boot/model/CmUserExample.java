@@ -392,7 +392,7 @@ public class CmUserExample implements Serializable {
     }
 
     /**
-     * cm_user 2018-06-06
+     * cm_user 2018-06-22
      */
     public static class Criterion implements Serializable {
         private String condition;

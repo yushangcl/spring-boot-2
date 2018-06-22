@@ -7,9 +7,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 
+/**
+ * @author log.r
+ */
 @SpringBootApplication
 @EnableCaching
-@MapperScan("com.whh.spring.boot.dao") //mapper 扫描
+@MapperScan("com.whh.spring.boot.dao")
 public class SpringBoot2Application {
 
     public static void main(String[] args) {
