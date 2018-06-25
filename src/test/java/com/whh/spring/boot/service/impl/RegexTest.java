@@ -1,4 +1,4 @@
-package com.whh.spring.boot;
+package com.whh.spring.boot.service.impl;
 
 /**
  * @author huahui.wu
