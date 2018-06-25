@@ -9,6 +9,7 @@ import org.springframework.web.context.request.async.WebAsyncTask;
 import static java.lang.Thread.sleep;
 
 /**
+ * WebAsyncTask 异步任务
  * @author huahui.wu
  * @date 2018/6/25 09:54
  * @description
@@ -37,6 +38,8 @@ public class WebAsyncController {
 
         // 任务执行完成时调用该方法，无论执行发生异常或者超时，该方法都会执行
         asyncTask.onCompletion(() -> LOGGER.debug("任务执行完成"));
+
+        //异步执行，所以刚开始执行一个异步任务的时候，该方法会继续执行
         LOGGER.debug("继续处理其他事情");
         return asyncTask;
     }
@@ -60,6 +63,8 @@ public class WebAsyncController {
             LOGGER.debug("任务执行异常");
             return ERROR_MESSAGE;
         });
+
+        //异步执行，所以刚开始执行一个异步任务的时候，该方法会继续执行
         LOGGER.debug("继续处理其他事情");
         return asyncTask;
     }
@@ -85,6 +90,8 @@ public class WebAsyncController {
             LOGGER.debug("任务执行超时");
             return TIME_MESSAGE;
         });
+
+        //异步执行，所以刚开始执行一个异步任务的时候，该方法会继续执行
         LOGGER.debug("继续处理其他事情");
         return asyncTask;
     }
