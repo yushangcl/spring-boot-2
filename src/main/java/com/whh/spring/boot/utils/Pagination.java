@@ -98,4 +98,14 @@ public class Pagination<T> implements Serializable {
         this.total = total;
         this.list = list;
     }
+
+    @Override
+    public String toString() {
+        return "Pagination{" +
+                "page=" + page +
+                ", size=" + size +
+                ", total=" + total +
+                ", list=" + list +
+                '}';
+    }
 }

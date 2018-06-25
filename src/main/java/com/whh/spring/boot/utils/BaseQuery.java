@@ -11,23 +11,31 @@ import java.util.Map;
  * @description
  */
 public class BaseQuery implements Serializable {
+
     private Integer page;
     private Integer size;
     private String sort;
     private String orderBy;
     private Map<String, Object> params;
 
-
+    /**
+     * 默认 页码 1
+     */
     public int getPage() {
-        return page == null ? 1 : page;
+        int defaultPage = 1;
+        return page == null ? defaultPage : page;
     }
 
     public void setPage(int page) {
         this.page = page;
     }
 
+    /**
+     * 默认 页容量 10
+     */
     public int getSize() {
-        return size == null ? 10 : size;
+        int defaultSize = 10;
+        return size == null ? defaultSize : size;
     }
 
     public void setSize(int size) {
@@ -57,6 +65,14 @@ public class BaseQuery implements Serializable {
 
     public void setOrderBy(String orderBy) {
         this.orderBy = orderBy;
+    }
+
+    /**
+     *
+     * @return size
+     */
+    public Integer getLimit() {
+        return size;
     }
 
     public Map<String, Object> getParams() {
