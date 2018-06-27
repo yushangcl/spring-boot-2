@@ -39,6 +39,7 @@ public class TopicRabbitConfig {
 
     @Bean
     Binding bindingExchangeMessages(Queue queueMessages, TopicExchange exchange) {
+        //匹配 "topic." 都会接受到消息
         return BindingBuilder.bind(queueMessages).to(exchange).with("topic.#");
     }
 }
