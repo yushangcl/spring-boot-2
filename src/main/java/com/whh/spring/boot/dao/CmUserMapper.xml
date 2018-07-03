@@ -199,5 +199,9 @@
     FROM
     cm_user
   </select>
+
+  <select id="countUser" resultType="boolean">
+    SELECT  COUNT(*) FROM  cm_user
+  </select>
   <cache />
 </mapper>

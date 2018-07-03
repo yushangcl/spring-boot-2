@@ -95,4 +95,6 @@ public interface CmUserMapper {
     int updateByPrimaryKey(CmUser record);
 
     List<CmUser> selectUsers();
+
+    Boolean countUser();
 }
